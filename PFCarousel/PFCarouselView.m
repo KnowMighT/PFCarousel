@@ -159,10 +159,12 @@ static const NSTimeInterval defaultTime = 2;
 }
 
 // 假图
-- (void)p_insertLastPage
+- (void)p_insertPageWithItemIndex:(NSInteger)index
 {
-    PFCarouselImageView *view = [[PFCarouselImageView alloc] initWithFrame:CGRectMake(kWidth * _items.count, 0, kWidth, kHeight)];
-    view.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:_items[0] ofType:@"png"]];
+    PFCarouselItem *item = _items[index];
+    
+    PFCarouselImageView *view = [PFCarouselImageView new];
+    view.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:item.URLString ofType:@"png"]];
     view.tapBlock = ^{
       
         if (_block) {
@@ -238,28 +240,15 @@ static const NSTimeInterval defaultTime = 2;
     
     for (int i = 0; i < count; i++) {
         
-        PFCarouselItem *item = _items[i];
-        
-        PFCarouselImageView *imageView = [PFCarouselImageView new];
-        
-        imageView.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:item.URLString ofType:@"png"]];
-        
-        imageView.tapBlock = ^ {
-          
-            if (_block) {
-                _block(_items[i], i);
-            }
-        };
-        
-        [_imageViewItems addObject:imageView];
-        
-        [_scrollView addSubview:imageView];
+        [self p_insertPageWithItemIndex:i];
         
     }
     
     if (_items.count > 1) {
         
-        [self p_insertLastPage];
+        // a image for infinite scroll
+        
+        [self p_insertPageWithItemIndex:0];
     }
     
     [self layoutSubviews];
