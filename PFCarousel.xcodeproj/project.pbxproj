@@ -13,11 +13,11 @@
 		A35A0DFE1D95246000919D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A0DFC1D95246000919D67 /* Main.storyboard */; };
 		A35A0E001D95246000919D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35A0DFF1D95246000919D67 /* Assets.xcassets */; };
 		A35A0E031D95246000919D67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A0E011D95246000919D67 /* LaunchScreen.storyboard */; };
-		A35A0E0C1D9524CB00919D67 /* PFCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = A35A0E0B1D9524CB00919D67 /* PFCarouselView.m */; };
 		A3950EB41D99152700394E7D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB01D99152700394E7D /* 1.png */; };
 		A3950EB51D99152700394E7D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB11D99152700394E7D /* 2.png */; };
 		A3950EB61D99152700394E7D /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB21D99152700394E7D /* 3.png */; };
 		A3950EB71D99152700394E7D /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB31D99152700394E7D /* 4.png */; };
+		A39D3D0A1D9A59890073C815 /* PFCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = A39D3D091D9A59890073C815 /* PFCarouselView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +31,12 @@
 		A35A0DFF1D95246000919D67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A35A0E021D95246000919D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A35A0E041D95246000919D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A35A0E0A1D9524CB00919D67 /* PFCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFCarouselView.h; sourceTree = "<group>"; };
-		A35A0E0B1D9524CB00919D67 /* PFCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFCarouselView.m; sourceTree = "<group>"; };
 		A3950EB01D99152700394E7D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		A3950EB11D99152700394E7D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		A3950EB21D99152700394E7D /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		A3950EB31D99152700394E7D /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		A39D3D081D9A59890073C815 /* PFCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFCarouselView.h; sourceTree = "<group>"; };
+		A39D3D091D9A59890073C815 /* PFCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFCarouselView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +53,7 @@
 		A35A0DE71D95246000919D67 = {
 			isa = PBXGroup;
 			children = (
+				A39D3D071D9A59890073C815 /* PFCarouselView */,
 				A35A0DF21D95246000919D67 /* PFCarousel */,
 				A35A0DF11D95246000919D67 /* Products */,
 			);
@@ -73,8 +74,6 @@
 				A35A0DF71D95246000919D67 /* AppDelegate.m */,
 				A35A0DF91D95246000919D67 /* ViewController.h */,
 				A35A0DFA1D95246000919D67 /* ViewController.m */,
-				A35A0E0A1D9524CB00919D67 /* PFCarouselView.h */,
-				A35A0E0B1D9524CB00919D67 /* PFCarouselView.m */,
 				A35A0DF31D95246000919D67 /* Supporting Files */,
 			);
 			path = PFCarousel;
@@ -94,6 +93,15 @@
 				A35A0DF41D95246000919D67 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A39D3D071D9A59890073C815 /* PFCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				A39D3D081D9A59890073C815 /* PFCarouselView.h */,
+				A39D3D091D9A59890073C815 /* PFCarouselView.m */,
+			);
+			path = PFCarouselView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +181,7 @@
 			files = (
 				A35A0DFB1D95246000919D67 /* ViewController.m in Sources */,
 				A35A0DF81D95246000919D67 /* AppDelegate.m in Sources */,
-				A35A0E0C1D9524CB00919D67 /* PFCarouselView.m in Sources */,
+				A39D3D0A1D9A59890073C815 /* PFCarouselView.m in Sources */,
 				A35A0DF51D95246000919D67 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
