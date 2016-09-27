@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *dataSource = @[@"1", @"2", @"3", @"4"];
+    NSArray *dataSource = @[@"1", @"2", @"3", @"4",@"1", @"2", @"3", @"4"];
     
     NSInteger count = dataSource.count;
     
@@ -44,7 +44,7 @@
         
     }];
     
-    view.currentPageControlColor = [UIColor orangeColor];
+    view.currentPageControlColor = [UIColor cyanColor];
     
     [self.view addSubview:view];
     

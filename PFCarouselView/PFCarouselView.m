@@ -101,6 +101,7 @@ static const NSTimeInterval defaultTime = 2;
     UIPageControl * __weak _pageControl;
     
     PFCarouselViewBlock _block;
+    
 }
 
 @end
@@ -167,10 +168,12 @@ static const NSTimeInterval defaultTime = 2;
     
     UIPageControl *pageControl = [[UIPageControl alloc] initWithFrame:CGRectZero];
     pageControl.currentPage = 0;
+    pageControl.userInteractionEnabled = NO;
     pageControl.pageIndicatorTintColor = [UIColor grayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor blueColor];
     [self addSubview:pageControl];
     _pageControl = pageControl;
+    
     
 }
 
@@ -213,6 +216,25 @@ static const NSTimeInterval defaultTime = 2;
     }
     else {
         [_scrollView setContentOffset:CGPointMake(currentOffsetX + kWidth, 0) animated:YES];
+    }
+}
+
+- (void)p_pagePrevious
+{
+    CGFloat currentOffsetX = _scrollView.contentOffset.x;
+    
+    if (currentOffsetX < 0) {
+        
+        [_scrollView setContentOffset:CGPointMake(kWidth * (_imageViewItems.count - 1), 0) animated:NO];
+        
+        [_scrollView setContentOffset:CGPointMake(kWidth * (_imageViewItems.count - 2), 0) animated:YES];
+
+        
+    }
+    else {
+        
+        [_scrollView setContentOffset:CGPointMake(currentOffsetX - kWidth, 0) animated:YES];
+
     }
 }
 
@@ -303,7 +325,7 @@ static const NSTimeInterval defaultTime = 2;
     
     _scrollView.frame  = self.bounds;
     _scrollView.contentSize = CGSizeMake(_imageViewItems.count * kWidth, kHeight);
-    _pageControl.frame = CGRectMake((kWidth - 200) / 2, kHeight - 30, 200, 30);
+    _pageControl.frame = CGRectMake(0, kHeight - 30, kWidth, 30);
     
     if (!_imageViewItems || _imageViewItems.count == 0) {
         return;
