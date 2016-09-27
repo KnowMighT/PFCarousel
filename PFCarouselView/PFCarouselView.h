@@ -28,7 +28,7 @@ typedef void(^PFCarouselViewBlock)(PFCarouselItem *item, NSInteger index); // cl
 
 @interface PFCarouselView : UIView
 
-@property (nonatomic, assign, readonly) NSTimeInterval coolDownTime; // How often NSTimer call his method
+@property (nonatomic, assign, readonly) NSTimeInterval coolDownTime; // How often NSTimer calls his method
 
 
 @property (nonatomic, strong) UIColor *currentPageControlColor; // UIPageControl -> currentPageIndicatorTintColor

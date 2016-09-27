@@ -8,6 +8,9 @@
 
 #import "PFCarouselView.h"
 
+
+#pragma mark - PFCarouselImageView
+
 typedef void(^PFCarouselImageViewTap)();
 
 @interface PFCarouselImageView : UIImageView
@@ -66,16 +69,16 @@ typedef void(^PFCarouselImageViewTap)();
 
 
 
-/*****************************************************/
+#pragma mark - PFCarouselItem
 
 @implementation PFCarouselItem
 
 
 @end
 
-/*****************************************************/
 
 
+#pragma mark - PFCarouselView
 
 static const NSTimeInterval defaultTime = 2;
 
@@ -264,7 +267,7 @@ static const NSTimeInterval defaultTime = 2;
     
     if (_items.count > 1) {
         
-        // a image for infinite scroll
+        // A image for infinite scroll
         
         [self p_insertPageWithItemIndex:0];
     }
@@ -290,7 +293,6 @@ static const NSTimeInterval defaultTime = 2;
 {
     [self p_pageNext];
 }
-
 
 
 #pragma mark - inhert
