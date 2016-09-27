@@ -26,13 +26,11 @@ So if you want to use the net image, you may use `SDWebImage` and change the cod
 2.Init
 
      PFCarouselView *view = [PFCarouselView carouselViewWithFrame:frame
-                                                           Items:itemsArr
-                                                    coolDownTime:2];
+                                                            Items:itemsArr
+                                                     coolDownTime:2];
     
     [view setPFCarouselViewBlock:^(PFCarouselItem *item, NSInteger index) {
-      
         NSLog(@"%ld",index);
-        
     }];
     
     view.currentPageControlColor = [UIColor orangeColor];
