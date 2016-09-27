@@ -177,7 +177,12 @@ static const NSTimeInterval defaultTime = 2;
     PFCarouselItem *item = _items[index];
     
     PFCarouselImageView *view = [PFCarouselImageView new];
+    
+    
+    // You can change the code here...
     view.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:item.URLString ofType:@"png"]];
+    
+    
     view.tapBlock = ^{
       
         if (_block) {
