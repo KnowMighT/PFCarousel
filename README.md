@@ -25,7 +25,7 @@ So if you want to use the net image, you may use `SDWebImage` and change the cod
 
 2.Init
 
-     PFCarouselView *view = [PFCarouselView carouselViewWithFrame:frame
+    PFCarouselView *view = [PFCarouselView carouselViewWithFrame:frame
                                                             Items:itemsArr
                                                      coolDownTime:2];
     
