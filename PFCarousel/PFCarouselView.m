@@ -66,15 +66,14 @@ typedef void(^PFCarouselImageViewTap)();
 
 
 
-
+/*****************************************************/
 
 @implementation PFCarouselItem
 
 
 @end
 
-
-
+/*****************************************************/
 
 
 
@@ -172,7 +171,7 @@ static const NSTimeInterval defaultTime = 2;
     
 }
 
-// 假图
+
 - (void)p_insertPageWithItemIndex:(NSInteger)index
 {
     PFCarouselItem *item = _items[index];
@@ -182,7 +181,7 @@ static const NSTimeInterval defaultTime = 2;
     view.tapBlock = ^{
       
         if (_block) {
-            _block(_items[0], 0);
+            _block(_items[index], index);
         }
     };
     
@@ -191,7 +190,7 @@ static const NSTimeInterval defaultTime = 2;
     [_imageViewItems addObject:view];
 }
 
-// 滚动至下一张图
+
 - (void)p_pageNext
 {
     
