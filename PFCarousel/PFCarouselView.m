@@ -64,6 +64,20 @@ typedef void(^PFCarouselImageViewTap)();
 
 @end
 
+
+
+
+
+@implementation PFCarouselItem
+
+
+@end
+
+
+
+
+
+
 static const NSTimeInterval defaultTime = 2;
 
 
