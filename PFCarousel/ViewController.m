@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "PFCarouselView.h"
 
-
 @interface ViewController ()
 
 @end
@@ -19,7 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *dataSource = @[@"1", @"2", @"3", @"4",@"1", @"2", @"3", @"4"];
+    // You should set this property to "NO" if you have a navigation bar.
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    NSArray *dataSource = @[@"1", @"2", @"3", @"4"];
     
     NSInteger count = dataSource.count;
     
@@ -32,14 +34,17 @@
         [itemsArr addObject:item];
     }
     
-    CGRect frame = CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, 200);
+    
+    
+    
+    CGRect frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, 200);
     
     PFCarouselView *view = [PFCarouselView carouselViewWithFrame:frame
                                                            Items:itemsArr
                                                     coolDownTime:2];
     
     [view setPFCarouselViewBlock:^(PFCarouselItem *item, NSInteger index) {
-      
+        
         NSLog(@"%ld",index);
         
     }];
@@ -48,8 +53,8 @@
     
     [self.view addSubview:view];
     
+    
 }
-
 
 
 @end

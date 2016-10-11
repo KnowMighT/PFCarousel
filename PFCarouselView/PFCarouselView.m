@@ -9,6 +9,7 @@
 #import "PFCarouselView.h"
 
 
+
 #pragma mark - PFCarouselImageView
 
 typedef void(^PFCarouselImageViewTap)();
@@ -78,6 +79,42 @@ typedef void(^PFCarouselImageViewTap)();
 
 
 
+#pragma mark - PFTimerBlockSupport(Category)
+
+@interface NSTimer (PFTimerBlockSupport)
+
++ (NSTimer *)PF_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
+                                       repeats:(BOOL)repeats
+                                         block:(void (^)())block;
+
+@end
+
+@implementation NSTimer (PFTimerBlockSupport)
+
++ (NSTimer *)PF_scheduledTimerWithTimeInterval:(NSTimeInterval)interval
+                                       repeats:(BOOL)repeats
+                                         block:(void (^)())block
+{
+    return [self scheduledTimerWithTimeInterval:interval
+                                         target:self
+                                       selector:@selector(PF_blockInvoke:)
+                                       userInfo:[block copy]
+                                        repeats:repeats];
+}
+
++ (void)PF_blockInvoke:(NSTimer *)timer
+{
+    void (^block)() = timer.userInfo;
+    
+    if (block) {
+        block();
+    }
+}
+
+@end
+
+
+
 #pragma mark - PFCarouselView
 
 static const NSTimeInterval defaultTime = 2;
@@ -85,7 +122,6 @@ static const NSTimeInterval defaultTime = 2;
 
 #define kWidth  CGRectGetWidth(_scrollView.frame)
 #define kHeight CGRectGetHeight(_scrollView.frame)
-
 
 @interface PFCarouselView () <UIScrollViewDelegate>
 {
@@ -162,6 +198,7 @@ static const NSTimeInterval defaultTime = 2;
     scrollView.pagingEnabled = YES;
     scrollView.showsVerticalScrollIndicator = NO;
     scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.alwaysBounceVertical = NO;
     scrollView.delegate = self;
     [self addSubview:scrollView];
     _scrollView = scrollView;
@@ -186,14 +223,13 @@ static const NSTimeInterval defaultTime = 2;
     
     
     // You can change the code here...
-    view.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:item.URLString ofType:@"png"]];
+    view.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:item.URLString ofType:@"jpg"]];
     
+    __weak PFCarouselView *weakSelf = self;
     
     view.tapBlock = ^{
       
-        if (_block) {
-            _block(_items[index], index);
-        }
+        [weakSelf p_handleBlockWithIndex:index];
     };
     
     
@@ -201,6 +237,14 @@ static const NSTimeInterval defaultTime = 2;
     [_imageViewItems addObject:view];
 }
 
+
+- (void)p_handleBlockWithIndex:(NSInteger)index
+{
+    if (_block) {
+        _block(_items[index], index);
+    }
+
+}
 
 - (void)p_pageNext
 {
@@ -229,7 +273,6 @@ static const NSTimeInterval defaultTime = 2;
         
         [_scrollView setContentOffset:CGPointMake(kWidth * (_imageViewItems.count - 2), 0) animated:YES];
 
-        
     }
     else {
         
@@ -247,11 +290,14 @@ static const NSTimeInterval defaultTime = 2;
     
     if (!_timer) {
         
-        _timer = [NSTimer scheduledTimerWithTimeInterval:_coolDownTime
-                                                  target:self
-                                                selector:@selector(action_scroll)
-                                                userInfo:nil
-                                                 repeats:YES];
+        __weak PFCarouselView * weakSelf = self;
+        
+        _timer = [NSTimer PF_scheduledTimerWithTimeInterval:_coolDownTime repeats:YES block:^() {
+            
+            PFCarouselView * strongSelf = weakSelf;
+            
+            [strongSelf action_scroll];
+        }];
     }
 }
 

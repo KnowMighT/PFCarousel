@@ -23,6 +23,8 @@
 @end
 
 
+/*****/
+
 typedef void(^PFCarouselViewBlock)(PFCarouselItem *item, NSInteger index); // click block
 
 

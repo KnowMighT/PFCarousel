@@ -13,10 +13,10 @@
 		A35A0DFE1D95246000919D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A0DFC1D95246000919D67 /* Main.storyboard */; };
 		A35A0E001D95246000919D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35A0DFF1D95246000919D67 /* Assets.xcassets */; };
 		A35A0E031D95246000919D67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A0E011D95246000919D67 /* LaunchScreen.storyboard */; };
-		A3950EB41D99152700394E7D /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB01D99152700394E7D /* 1.png */; };
-		A3950EB51D99152700394E7D /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB11D99152700394E7D /* 2.png */; };
-		A3950EB61D99152700394E7D /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB21D99152700394E7D /* 3.png */; };
-		A3950EB71D99152700394E7D /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB31D99152700394E7D /* 4.png */; };
+		A3950EB41D99152700394E7D /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB01D99152700394E7D /* 1.jpg */; };
+		A3950EB51D99152700394E7D /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB11D99152700394E7D /* 2.jpg */; };
+		A3950EB61D99152700394E7D /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB21D99152700394E7D /* 3.jpg */; };
+		A3950EB71D99152700394E7D /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3950EB31D99152700394E7D /* 4.jpg */; };
 		A39D3D0A1D9A59890073C815 /* PFCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = A39D3D091D9A59890073C815 /* PFCarouselView.m */; };
 /* End PBXBuildFile section */
 
@@ -31,10 +31,10 @@
 		A35A0DFF1D95246000919D67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A35A0E021D95246000919D67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A35A0E041D95246000919D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3950EB01D99152700394E7D /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		A3950EB11D99152700394E7D /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		A3950EB21D99152700394E7D /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
-		A3950EB31D99152700394E7D /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		A3950EB01D99152700394E7D /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		A3950EB11D99152700394E7D /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		A3950EB21D99152700394E7D /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		A3950EB31D99152700394E7D /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		A39D3D081D9A59890073C815 /* PFCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFCarouselView.h; sourceTree = "<group>"; };
 		A39D3D091D9A59890073C815 /* PFCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFCarouselView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,10 +82,10 @@
 		A35A0DF31D95246000919D67 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A3950EB01D99152700394E7D /* 1.png */,
-				A3950EB11D99152700394E7D /* 2.png */,
-				A3950EB21D99152700394E7D /* 3.png */,
-				A3950EB31D99152700394E7D /* 4.png */,
+				A3950EB01D99152700394E7D /* 1.jpg */,
+				A3950EB11D99152700394E7D /* 2.jpg */,
+				A3950EB21D99152700394E7D /* 3.jpg */,
+				A3950EB31D99152700394E7D /* 4.jpg */,
 				A35A0DFC1D95246000919D67 /* Main.storyboard */,
 				A35A0E011D95246000919D67 /* LaunchScreen.storyboard */,
 				A35A0DFF1D95246000919D67 /* Assets.xcassets */,
@@ -131,7 +131,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PF;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = One;
 				TargetAttributes = {
 					A35A0DEF1D95246000919D67 = {
@@ -163,10 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A35A0E031D95246000919D67 /* LaunchScreen.storyboard in Resources */,
-				A3950EB71D99152700394E7D /* 4.png in Resources */,
-				A3950EB41D99152700394E7D /* 1.png in Resources */,
-				A3950EB51D99152700394E7D /* 2.png in Resources */,
-				A3950EB61D99152700394E7D /* 3.png in Resources */,
+				A3950EB71D99152700394E7D /* 4.jpg in Resources */,
+				A3950EB41D99152700394E7D /* 1.jpg in Resources */,
+				A3950EB51D99152700394E7D /* 2.jpg in Resources */,
+				A3950EB61D99152700394E7D /* 3.jpg in Resources */,
 				A35A0E001D95246000919D67 /* Assets.xcassets in Resources */,
 				A35A0DFE1D95246000919D67 /* Main.storyboard in Resources */,
 			);
@@ -222,8 +222,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -267,8 +269,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
