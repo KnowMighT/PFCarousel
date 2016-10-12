@@ -136,6 +136,8 @@
 				TargetAttributes = {
 					A35A0DEF1D95246000919D67 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7V9TCGUH27;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -300,7 +302,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7V9TCGUH27;
 				INFOPLIST_FILE = PFCarousel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.one.PFCarousel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,7 +316,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7V9TCGUH27;
 				INFOPLIST_FILE = PFCarousel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.one.PFCarousel;
 				PRODUCT_NAME = "$(TARGET_NAME)";

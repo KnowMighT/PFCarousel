@@ -45,7 +45,7 @@
     
     [view setPFCarouselViewBlock:^(PFCarouselItem *item, NSInteger index) {
         
-        NSLog(@"%ld",index);
+        NSLog(@"%ld",(long)index);
         
     }];
     
